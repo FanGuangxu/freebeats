@@ -1,0 +1,17 @@
+﻿/* CSS Document */
+@charset "utf-8";
+.share{ padding-top:6px;}
+.share .jiathis_button_weixin{ background:url(../images/ico_weixin.png) no-repeat; width:32px; height:32px; display:block; float:left; margin-right:16px;}
+.share .jiathis_style_32x32 .jtico_weixin{ background:url(../images/ico_weixin.png) no-repeat;}
+.share .jiathis_button_tsina{ background:url(../images/ico_sina.png) no-repeat; width:32px; height:32px; display:block; float:left; margin-right:16px;}
+.share .jiathis_style_32x32 .jtico_tsina{ background:url(../images/ico_sina.png) no-repeat;}
+.share .jiathis_button_qzone{ background:url(../images/ico_qzone.png) no-repeat; width:32px; height:32px; display:block; float:left; margin-right:16px;}
+.share .jiathis_style_32x32 .jtico_qzone{ background:url(../images/ico_qzone.png) no-repeat;}
+
+.pro_share_list{ border:1px solid #ccc; background:#fff; padding:15px; width:140px;}
+.pro_share_list .jiathis_style_32x32 .jtico_weixin{ background:url(../images/ico_weixin.png) left center no-repeat;}
+.pro_share_list .jiathis_style_32x32 .jtico_tsina{ background:url(../images/ico_sina.png) left center no-repeat;}
+.pro_share_list .jiathis_style_32x32 .jtico_qzone{ background:url(../images/ico_qzone.png) left center no-repeat;}
+.pro_share_list p{ display:block; clear:both; padding:5px 0; height:32px;}
+.pro_share_list p span{ float:left; padding-left:5px;}
+.pro_share_list p a{ color:#000;}

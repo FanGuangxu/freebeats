@@ -29,6 +29,7 @@ a {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  text-decoration:none;
 }
 a:hover {
   text-decoration: none !important;
@@ -1568,7 +1569,6 @@ figure {
 }
 #footer a {
   color: #848484;
-  text-decoration: underline;
 }
 #footer a:hover {
   color: #00ADB5;

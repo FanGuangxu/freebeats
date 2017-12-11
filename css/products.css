@@ -1,0 +1,242 @@
+﻿/***产品分类页面样式***/
+.classfly_bg{
+	background: #fff;
+	margin-bottom: 120px;
+	box-shadow: 0 3px 3px #ccc;
+}
+.classfly_align{
+	width: 960px;
+	margin: 0 auto;
+	border-bottom: #e9e9e9 1px solid;
+	padding: 40px 0;
+}
+.classfly_align:last-child{
+	border-bottom: 0;
+}
+.classfly_title1, .classfly_title2{
+	font-size: 20px;
+	color: #333;
+	line-height: 30px;
+	font-weight: bold;
+	padding: 10px 0;
+}
+.more a{
+	color: #C8152D;
+}
+.hot_sale li, .float_sale li{
+	border: #e9e9e9 1px solid;
+	padding: 10px;
+	float: left;
+	margin-left: 14px;
+}
+.hot_sale li.first-child{
+	margin-left: 0;
+}
+.hot_sale li{
+	width: 288px;
+}
+.float_sale{
+	margin-top: -14px;
+}
+.float_sale li{
+	width: 206px;
+	margin-top: 14px;
+}
+.hot_sale li:hover, .float_sale li:hover{
+	border: #C8152D 1px solid;
+}
+.hot_sale li span{
+	display: block;
+	line-height: 25px;
+	width: 90%;
+	margin: 0 auto;
+}
+.float_sale li span{
+	display: block;
+	line-height: 20px;
+}
+.hot_sale li span, .float_sale li span.hot_img{
+	text-align: center;
+	margin-bottom: 10px;
+	position: relative;
+}
+.hot_sale li span img.hot_img{
+	width: 205px;
+	height: 205px;
+	margin-top: 30px;
+}
+.float_sale li span.hot_img img{
+	width: 140px;
+	height: 140px;
+	margin-top: 30px;
+}
+.hot_sale li span.name{
+	font-size: 18px;
+	color: #333;
+	text-align: left;
+	white-space: nowrap;	
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.float_sale li span.name{
+	font-size: 14px;
+	color: #333;
+	text-align: left;
+	white-space: nowrap;	
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.hot_sale li span.red{
+	font-size: 22px;
+	color: #C8152D;
+	text-align: left;
+}
+.hot_sale li span.grey, .float_sale li span.grey{
+	color: #666;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.hot_sale li span.grey{
+	font-size: 16px;
+}
+.float_sale li span.grey{
+	font-size: 12px;
+}
+.hot_sale li:first-child{
+	margin-left: 0;
+}
+.float_title, .float_list{
+	float: left;
+}
+.float_title{
+	width: 232px;
+}
+.float_list{
+	width: 728px;
+}
+.company_logo{
+	position: absolute;
+	top: -10px;
+	left: -10px;
+}
+.company_logo img{
+	width: 95px;
+	height: 30px;
+}
+.price{
+	position: absolute;
+	display: block;
+	top: -10px;
+	left: -10px;
+	width: 93px;
+	font-size: 14px;
+	color: #fff;
+	line-height: 30px;
+	background: url(../images/price.png) no-repeat;
+}
+
+/***产品详情样式***/
+.products_call{
+	width: 800px;
+	margin: 0 auto;
+	padding: 40px 0;
+}
+.product_course{
+	width: 500px;
+	float: left;
+}
+.products_name{
+	font-size: 24px;
+	color: #C8152D;
+	line-height: 30px;
+}
+.products_name span{
+	font-size: 24px;
+	color: #C8152D;
+	font-weight: bold;
+	margin-right: 10px;
+}
+.products_tell{
+	margin-top: 5px;
+	margin-left: 38px;
+	font-size: 16px;
+	color: #333;
+	line-height: 25px;
+}
+.go_mall{
+	width: 223px;
+	height: 38px;
+	float: right;
+	text-align: right;
+	background: url(../images/go_mall.png) no-repeat;
+	position: relative;
+}
+.mall_select{
+	width: 143px;
+	font-size: 20px;
+	color: #fff;
+	line-height: 36px;
+	border: #c8152d 1px solid;
+	position: absolute;
+	top: 38px;
+	left: 78px;
+	z-index: 10px;
+}
+.mall_select li{
+	background: #f15268;
+	padding: 0 30px 0 10px;
+	border-top: #c8152d 1px solid;
+	position: relative;
+}
+.mall_select li.frist_mall{
+	border-top: 0;
+}
+.mall_select li:hover{
+	background: #C8152D;
+}
+.mall_selected{
+	width: 105px;
+	float: right;
+	font-size: 20px;
+	color: #fff;
+	line-height: 38px;
+	background: #C8152D;
+	padding: 0 30px 0 10px;
+	background: #C8152D;
+	border-top: none;
+	position: relative;
+	cursor: pointer;
+}
+.mall_selected span.up{
+	position: absolute;
+	top: 16px;
+	right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid white;
+}
+.mall_selected span.down{
+	position: absolute;
+	top: 16px;
+	right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid white;
+}
+.go_mall a{
+	display: block;
+}
+.products_photo{
+	width: 800px;
+	margin: 0 auto 120px auto;
+	text-align: center;
+}
+.products_photo img{
+	width: 100%;
+}
