@@ -1,0 +1,634 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    	<link href="css/scrollpic.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/simple-line-icons.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/superfish.css">
+    	<link type="text/css" rel="stylesheet" href="css/basic.css" />
+    	<link type="text/css" rel="stylesheet" href="css/products.css" />
+		<link rel="stylesheet" href="css/style.css">
+		<meta charset="utf-8" />
+		<title>产品中心</title>
+	</head>
+	<body>
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<div id="fh5co-header">
+			<header id="fh5co-header-section">
+				<div class="container">
+					<div class="nav-header">
+						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+						<h1 id="fh5co-logo"><a href="index.html">Free Beats</a></h1>
+						<!-- START #fh5co-menu-wrap -->
+						<nav id="fh5co-menu-wrap" role="navigation">
+							<ul class="sf-menu" id="fh5co-primary-menu">
+							<!-- 	<li>
+									<a class="active" href="index.html">Home</a>
+								</li> -->
+								<li><a href="index.html" style="background:none;">首页</a></li>
+								<li><a href="product.html">产品介绍</a></li>
+								<li>
+									 <ul class="fh5co-sub-menu">
+									 	<li><a href="left-sidebar.html">入耳式耳机</a></li>
+									 	<li><a href="right-sidebar.html">头戴式耳机</a></li>
+										<li>
+											<a href="#" class="fh5co-sub-ddown">蓝牙耳机</a>
+											<ul class="fh5co-sub-menu">
+												<li><a href="product.html" target="_blank">Uear系列</a></li>
+												<li><a href="product.html" target="_blank">Myen系列</a></li>
+												<li><a href="product.html" target="_blank">UE系列</a></li>
+												<li><a href="product.html" target="_blank">HIFI</a></li>
+											</ul>
+										</li>
+										<li><a href="product.html">挂耳式耳机</a></li>
+										<li><a href="product.html">重低音</a></li>
+										<li><a href="product.html">HIFI现场</a></li> 
+									</ul>
+								</li>
+								<li><a href="about.html">关于我们</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>		
+		</div>
+<script  type="text/javascript">
+	$(document).ready(function(){
+		var curPath = window.location.pathname;//当前网页地址的路径
+		var curSearch = curPath + window.location.search;
+		var arr = curPath.split("/");
+		var bo = false;
+		var textStr ;
+		$.each($(".nav_list li"), function(i,ele) {
+			var $a = $(this).find("a");
+			var hrefName = $a.attr("href");
+			textStr = $a.text();
+			if(hrefName==curPath || curSearch == hrefName){
+				bo = true;
+				$a.addClass("active");
+				$a.html('<img src="picture/nav_out.png" />'+textStr+'<img src="picture/nav_out.png" />');
+			}else{
+				$a.removeClass("active");
+				$a.html(textStr);
+			}
+		});
+		if(!bo){
+			var $cur = $(".nav_list li").eq(0).find("a");
+			textStr = $cur.text();
+			$cur.addClass("active");
+			$cur.html('<img src="picture/nav_out.png" />'+textStr+'<img src="picture/nav_out.png" />');
+		}
+	});
+</script>
+			</div>
+			<!--轮换焦点图区开始-->
+		    <div class="yiz-slider-3">
+			    <ul>
+				        	<li>
+				    		    <a href="http://mall.esomic.com/mall/product/productDetail.do?productId=10333&reffer=http%3A%2F%2Fmall.esomic.com%2Fmall%2Fsearch%2FsearchProduct.do%3Fkeyword%3DG941" target="_blank">
+									<img src="picture/780d279333194454949627c04342970797446.jpg" />
+								</a>
+				    		</li>
+				    	
+				    		<li>
+				    		    <a href="http://mall.esomic.com/mall/product/productDetail.do?productId=10362" target="_blank">
+									<img src="picture/7cbdd288a8844dae8014e7f6cd967e1a80420.jpg" />
+								</a>
+				    		</li>
+				    	
+				    		<li>
+				    		    <a href="http://mall.esomic.com/mall/product/productDetail.do?productId=10554&reffer=http%3A%2F%2Fmall.esomic.com%2Fmall%2Fsearch%2FsearchProduct.do%3Fkeyword%3Dp7" target="_blank">
+									<img src="picture/cb077d8052b74c3eb863e6eda538b53d55956.jpg" />
+								</a>
+				    		</li>
+				    	
+			    	
+			    </ul>
+			</div>
+		    <!--轮换焦点图区结束-->
+		</div>
+		<div class="display_nav" id="display_nav">
+			<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<div  id="leftlist_menu" class="default_width leftlist_menu">
+	<ul class="nav_list">
+		<li><a href="/index.html">首页</a></li>
+		<li><a href="products.html">产品中心</a></li>
+		<li><a href="about.html">关于我们</a></li>
+		<div class="clear"></div>
+	</ul>
+</div>
+<script  type="text/javascript">
+	$(document).ready(function(){
+
+		var curPath = window.location.pathname;//当前网页地址的路径
+		var curSearch = curPath + window.location.search;
+		var arr = curPath.split("/");
+		var bo = false;
+		var textStr ;
+		$.each($(".nav_list li"), function(i,ele) {
+			var $a = $(this).find("a");
+			var hrefName = $a.attr("href");
+			textStr = $a.text();
+			if(hrefName==curPath || curSearch == hrefName){
+				bo = true;
+				$a.addClass("active");
+				$a.html('<img src="picture/nav_out.png" />'+textStr+'<img src="picture/nav_out.png" />');
+			}else{
+				$a.removeClass("active");
+				$a.html(textStr);
+			}
+		});
+		if(!bo){
+			var $cur = $(".nav_list li").eq(0).find("a");
+			textStr = $cur.text();
+			$cur.addClass("active");
+			$cur.html('<img src="picture/nav_out.png" />'+textStr+'<img src="picture/nav_out.png" />');
+		}
+	});
+</script>
+		</div>
+		<!--主区域-->
+		<div class="default_width">
+			<div class="classfly_bg">
+				<!--热力推荐区域-->
+				<div class="classfly_align">
+					<div class="classfly_title1">热力推荐</div>
+					<ul class="hot_sale">
+					 
+					  
+					    
+							<li class="first-child">
+						
+						 
+						   <a href="/websiteProduct/productDetail/10567.html" target="_blank">
+							<span><img src="picture/7d5ec3f73728452a8641b65e4fec042375323.jpg" class="hot_img" />
+							<div class="company_logo"></div></span>
+									<span class="name">G954 头戴式电脑耳麦 7.1声效 游戏耳机 灰色</span>
+									<span class="red">RMB 179.0</span>
+									
+							</a>
+						</li>
+						
+					    
+						 
+							<li >
+						
+						   <a href="/websiteProduct/productDetail/10569.html" target="_blank">
+							<span><img src="picture/9b379d5808054f2c9e31166145c1fd1463390.jpg" class="hot_img" /><div class="company_logo"></div></span>
+									<span class="name">W2音乐耳机入耳式 苹果安卓华为通用运动蓝牙耳塞</span>
+									<span class="red">RMB 109.0</span>
+									
+							</a>
+						</li>
+						
+					    
+						 
+							<li >
+						
+						   <a href="/websiteProduct/productDetail/10566.html" target="_blank">
+							<span><img src="picture/c66ebbe02f964bdb873dc031220f2d2537769.jpg" class="hot_img" /><div class="company_logo"></div></span>
+									<span class="name">G618PRO蓝牙音乐耳机入耳式王者荣耀游戏 手游耳麦</span>
+									<span class="red">RMB 199.0</span>
+									
+							</a>
+						</li>
+						
+						
+						<div class="clear"></div>
+					</ul>
+				</div>
+				<!--游戏系列区域-->
+				
+				
+				
+				<div class="classfly_align">
+					<div class="float_title">
+						<div class="classfly_title2">游戏系列</div>
+						
+							<div class="more" data-index="0" ><a href="javascript:void(0);"></a></div>
+						
+					</div>
+					<div class="float_list">
+						<ul class="float_sale">
+						   			   	   
+							   
+									<li>
+									  <a href="/websiteProduct/productDetail/10567.html" target="_blank">
+										<span class="hot_img"><img src="picture/7d5ec3f73728452a8641b65e4fec042375323.jpg" /><div class="price">RMB 179.0</div></span>
+										<span class="name">G954 头戴式电脑耳麦 7.1声效 游戏耳机 灰色</span>
+										
+									  </a>
+									</li>
+								
+									<li>
+									  <a href="/websiteProduct/productDetail/10564.html" target="_blank">
+										<span class="hot_img"><img src="picture/bc37a3e5a9d2402b91357f09bfe11a6173268.png" /><div class="price">RMB 129.0</div></span>
+										<span class="name">G618 专业级游戏耳机 环绕音效 性能王</span>
+										
+									  </a>
+									</li>
+								
+									<li>
+									  <a href="/websiteProduct/productDetail/10333.html" target="_blank">
+										<span class="hot_img"><img src="picture/5.jpg" /><div class="price">RMB 249.0</div></span>
+										<span class="name">G941专业游戏耳机头戴式潮 usb震动电脑耳麦cf专用</span>
+										
+									  </a>
+									</li>
+								
+									<li>
+									  <a href="/websiteProduct/productDetail/10566.html" target="_blank">
+										<span class="hot_img"><img src="picture/c66ebbe02f964bdb873dc031220f2d2537769.jpg" /><div class="price">RMB 199.0</div></span>
+										<span class="name">G618PRO蓝牙音乐耳机入耳式王者荣耀游戏 手游耳麦</span>
+										
+									  </a>
+									</li>
+								
+									<li>
+									  <a href="/websiteProduct/productDetail/10345.html" target="_blank">
+										<span class="hot_img"><img src="picture/2.jpg" /><div class="price">RMB 579.0</div></span>
+										<span class="name">E95x 震动电脑耳麦 专业游戏电竞耳机头戴式 重低音</span>
+										
+									  </a>
+									</li>
+								
+									<li>
+									  <a href="/websiteProduct/productDetail/10558.html" target="_blank">
+										<span class="hot_img"><img src="picture/1e46f029c434497f9b950091fcf8a38f50221.jpg" /><div class="price">RMB 89.0</div></span>
+										<span class="name">血魂 cf电竞游戏耳麦 头戴式 发光 电脑耳机带麦</span>
+										
+									  </a>
+									</li>
+								
+							
+							<div class="clear"></div>
+						</ul>
+						 <ul class="float_sale default_display moreCon"> 
+						  
+							   
+									<li>
+										<a href="/websiteProduct/productDetail/10547.html" target="_blank">
+											<span class="hot_img"><img src="picture/04e0d58286e8439aa005c8458cf0683611510.jpg" /><div class="price">RMB 279.0</div></span>
+											<span class="name">G909PRO 7.1震动游戏影音耳机头戴式重低音电竞耳麦</span>
+											
+										</a>
+									</li>
+								
+									<li>
+										<a href="/websiteProduct/productDetail/10330.html" target="_blank">
+											<span class="hot_img"><img src="picture/3.jpg" /><div class="price">RMB 349.0</div></span>
+											<span class="name">G910 重低音 头戴式 电脑震动耳机耳麦</span>
+											
+										</a>
+									</li>
+								
+									<li>
+										<a href="/websiteProduct/productDetail/10557.html" target="_blank">
+											<span class="hot_img"><img src="picture/6d14bee80190476a96650557d082091418789.jpg" /><div class="price">RMB 399.0</div></span>
+											<span class="name">G983 头戴式7.1耳麦 双麦克风主动降噪Xbox耳机PS3</span>
+											
+										</a>
+									</li>
+								
+									<li>
+										<a href="/websiteProduct/productDetail/10347.html" target="_blank">
+											<span class="hot_img"><img src="picture/2_1.jpg" /><div class="price">RMB 199.0</div></span>
+											<span class="name">G932 头戴式电脑耳机 USB游戏耳麦 笔记本7.1 CF</span>
+											
+										</a>
+									</li>
+								
+									<li>
+										<a href="/websiteProduct/productDetail/10551.html" target="_blank">
+											<span class="hot_img"><img src="picture/d6e49124dd014d06a9c21947af50f6ca45940.jpg" /><div class="price">RMB 199.0</div></span>
+											<span class="name">G951 电竞游戏耳机 头戴式 电脑耳机 被动降噪 免驱动 振动耳麦</span>
+											
+										</a>
+									</li>
+								
+									<li>
+										<a href="/websiteProduct/productDetail/10560.html" target="_blank">
+											<span class="hot_img"><img src="picture/59aa63429edf45748d1c7f832ca4b63676745.jpg" /><div class="price">RMB 209.0</div></span>
+											<span class="name">G951情久版专业电竞震动游戏耳机</span>
+											
+										</a>
+									</li>
+								
+									<li>
+										<a href="/websiteProduct/productDetail/10548.html" target="_blank">
+											<span class="hot_img"><img src="picture/a213b93ffaca4336a336cd8a15a97ccf72783.jpg" /><div class="price">RMB 199.0</div></span>
+											<span class="name">P6 极炫手游耳机 电竞游戏耳机 3.5震动手机耳机潮</span>
+											
+										</a>
+									</li>
+								
+									<li>
+										<a href="/websiteProduct/productDetail/10329.html" target="_blank">
+											<span class="hot_img"><img src="picture/1.jpg" /><div class="price">RMB 259.0</div></span>
+											<span class="name">G909 7.1声道 专业震动USB游戏耳麦 低音强到震动 亲肤大耳罩</span>
+											
+										</a>
+									</li>
+								
+									<li>
+										<a href="/websiteProduct/productDetail/10344.html" target="_blank">
+											<span class="hot_img"><img src="picture/dcb9ee2ff6604c73ae191b30cabafc2e04788.jpg" /><div class="price">RMB 75.0</div></span>
+											<span class="name">G923 头戴式 电脑游戏耳机耳麦 带线控 立体声</span>
+											
+										</a>
+									</li>
+								
+									<li>
+										<a href="/websiteProduct/productDetail/10563.html" target="_blank">
+											<span class="hot_img"><img src="picture/4d115e4b4e0e4f389611db2964b122f691850.jpg" /><div class="price">RMB 329.0</div></span>
+											<span class="name"> G949DE游戏耳机头戴式发光电竞耳麦USB电脑7.1带麦</span>
+											
+										</a>
+									</li>
+								
+									<li>
+										<a href="/websiteProduct/productDetail/10348.html" target="_blank">
+											<span class="hot_img"><img src="picture/2_2.jpg" /><div class="price">RMB 159.0</div></span>
+											<span class="name">G938 7.1音乐游戏头戴式笔记本电脑耳机 USB耳麦lol</span>
+											
+										</a>
+									</li>
+								
+									<li>
+										<a href="/websiteProduct/productDetail/10570.html" target="_blank">
+											<span class="hot_img"><img src="picture/2b3531de98204cb4b50e83e861f42a0a58691.jpg" /><div class="price">RMB 189.0</div></span>
+											<span class="name">G618S 运动音乐耳机 四核超强降噪</span>
+											
+										</a>
+									</li>
+								
+									<li>
+										<a href="/websiteProduct/productDetail/10568.html" target="_blank">
+											<span class="hot_img"><img src="picture/de559e59925548d7ad82c7b7d309307d24562.png" /><div class="price">RMB 179.0</div></span>
+											<span class="name">G955游戏耳机头戴式绝地求生USB吃鸡电竞耳麦7.1</span>
+											
+										</a>
+									</li>
+								
+									<li>
+										<a href="/websiteProduct/productDetail/10351.html" target="_blank">
+											<span class="hot_img"><img src="picture/2_3.jpg" /><div class="price">RMB 398.0</div></span>
+											<span class="name">E95 荣耀版 7.1震动游戏耳机头戴式 电竞电脑带耳麦</span>
+											
+										</a>
+									</li>
+								
+						
+							<div class="clear"></div>
+						 </ul> 
+						<!--more更多的部分，默认隐藏-->
+					</div>
+					<div class="clear"></div>
+				</div>
+				 
+				
+				
+				<div class="classfly_align">
+					<div class="float_title">
+						<div class="classfly_title2">音乐系列</div>
+						
+					</div>
+					<div class="float_list">
+						<ul class="float_sale">
+						   			   	   
+							   
+									<li>
+									  <a href="/websiteProduct/productDetail/10565.html" target="_blank">
+										<span class="hot_img"><img src="picture/057442abb2bb470b9ed98463fc03e6b454551.jpg" /><div class="price">RMB 599.0</div></span>
+										<span class="name">SC500入耳式主动降噪耳机重低音线控音乐耳塞带麦</span>
+										
+									  </a>
+									</li>
+								
+									<li>
+									  <a href="/websiteProduct/productDetail/10339.html" target="_blank">
+										<span class="hot_img"><img src="picture/1_1.jpg" /><div class="price">RMB 159.0</div></span>
+										<span class="name"> V4 高保真入耳式 手机音乐耳塞 双动圈 高保真 </span>
+										
+									  </a>
+									</li>
+								
+									<li>
+									  <a href="/websiteProduct/productDetail/10561.html" target="_blank">
+										<span class="hot_img"><img src="picture/b096610b5948463fbcead83dcdd3383092289.jpg" /><div class="price">RMB 399.0</div></span>
+										<span class="name">Sic-S3蓝牙运动耳机</span>
+										
+									  </a>
+									</li>
+								
+									<li>
+									  <a href="/websiteProduct/productDetail/10562.html" target="_blank">
+										<span class="hot_img"><img src="picture/fdfa92840cc743a7baf891ee1d1430bb47155.jpg" /><div class="price">RMB 159.0</div></span>
+										<span class="name">SOMIC Li2入耳式音乐耳机</span>
+										
+									  </a>
+									</li>
+								
+									<li>
+									  <a href="/websiteProduct/productDetail/10569.html" target="_blank">
+										<span class="hot_img"><img src="picture/9b379d5808054f2c9e31166145c1fd1463390.jpg" /><div class="price">RMB 109.0</div></span>
+										<span class="name"> W2音乐耳机入耳式 苹果安卓华为通用运动蓝牙耳塞</span>
+										
+									  </a>
+									</li>
+								
+							
+							<div class="clear"></div>
+						</ul>
+						<!--more更多的部分，默认隐藏-->
+						 <ul class="float_sale default_display moreCon"> 
+						  
+							   
+						
+							<div class="clear"></div>
+						 </ul> 
+						<!--more更多的部分，默认隐藏-->
+					</div>
+					<div class="clear"></div>
+				</div>
+				 
+				
+				
+				<div class="classfly_align">
+					<div class="float_title">
+						<div class="classfly_title2">HIFI系列</div>
+						
+					</div>
+					<div class="float_list">
+						<ul class="float_sale">
+						   			   	   
+							   
+									<li>
+									  <a href="/websiteProduct/productDetail/10332.html" target="_blank">
+										<span class="hot_img"><img src="picture/3_1.jpg" /><div class="price">RMB 169.0</div></span>
+										<span class="name">G926 电脑头戴式 发光耳麦 呼吸灯 usb耳机 可调音量 全指向麦克风</span>
+										
+									  </a>
+									</li>
+								
+							
+							<div class="clear"></div>
+						</ul>
+						<!--more更多的部分，默认隐藏-->
+						 <ul class="float_sale default_display moreCon"> 
+						  
+							   
+						
+							<div class="clear"></div>
+						 </ul> 
+						<!--more更多的部分，默认隐藏-->
+					</div>
+					<div class="clear"></div>
+				</div>
+				 
+				
+				
+				
+				
+				
+				
+			</div>
+		</div>
+
+<!--页脚区域-->
+		<footer id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="copyright">
+							<p><small>&copy; 2017 <a href="index.html">FreeBeats</a>. All Rights Reserved. <br> <a href="http://www.cssmoban.com/" target="_blank">FreeBeats</a> <a href="http://www.cssmoban.com/" target="_blank"></a></small></p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-4">
+								<h3>FreeBeats</h3>
+								<ul class="link">
+									<li><a href="#">首页</a></li>
+									<li><a href="#">产品介绍</a></li>
+									<li><a href="#">关于我们</a></li>
+									<li><a href="#">商务合作</a></li>
+								</ul>
+							</div>
+							<div class="col-md-6">
+								<h3>备案号</h3>
+								<p> 2016-2017 深圳FreeBeats科技有限公司 版权所有 深ICP备15043990号</p>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<ul class="social-icons">
+							<li>
+								<a href="#"><img src="./logo/wechat.png" alt="" style="width:20px;height:20px;"></a>
+								<a href="#"><img src="./logo/sinablog.png" alt="" style="width:20px;height:20px;"></a>
+								<a href="#"><img src="./logo/QQ.png" alt="" style="width:20px;height:20px;"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+<!--侧边栏结束-->
+ 
+	</body>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.scrollpic.js"></script><!--轮播用-->
+<script type="text/javascript" charset="UTF-8">
+	$(document).ready(function(){
+		//当滚动条的位置处于距顶部360像素以下时，顶部导航出现，否则消失 
+		$(window).scroll(function () { 
+			if ($(window).scrollTop() > 360) { 
+				$("#display_nav").fadeIn(150); 
+			} 
+			else { 
+				$("#display_nav").fadeOut(150); 
+			} 
+		}); 
+		//轮播初始化
+		 $('.yiz-slider-3').ScrollPic({
+	        Time: '3000',//自动切换时间
+	        speed: '800',//图片切换速度
+	        autoscrooll: true,//设置是否自动切换
+	        arrowcontrol: true, //开启开右箭头
+	        numbercontrol: true //关闭右下角按钮
+	    });
+	    
+		$("body").on("click",".more",function(e){
+			var _target = e.currentTarget;
+			//console.log("当前点击的对象是："+_target.className);
+			var arr = _target.className.split(" ");
+			$.each(arr, function(i,_clName) {
+				swFun(_target,_clName,e);
+			});
+			
+		});
+		
+		function swFun(_target,_clName,e){
+			switch(_clName){
+				case "more" : e.stopPropagation();
+							 var moreCon = $(_target).parents(".classfly_align").find(".moreCon");
+							 if(moreCon.css("display")=='block'){
+							 	moreCon.fadeOut(600);
+							 }else{
+							 	moreCon.fadeIn(600);
+							 }
+							 
+					break;
+			}//end switch
+			
+		}//end func
+		
+		//处理轮播图片  响应式自适应大小	
+		if($('.yiz-slider-3 ul li img').eq(0).width()!=0){
+			$.each($('.yiz-slider-3 ul li img'), function(i,ele) {
+				controlShowImage($(ele));
+			});
+		}else{
+			$('.yiz-slider-3 ul li img').load(function(e){
+		    	controlShowImage($(this));
+		    });
+		}
+	    
+	    /**
+		 * 图片处理
+		 */
+		function controlShowImage(imgObj,maxW,maxH){
+			var clipWidth = $(window).width();//屏幕的宽
+			var clipHeight = 320;//图片的最大高度
+			var imageWidth = 1920;//图片原宽度
+			var imageHeight = $(imgObj).height();//图片的原高度
+			var imageScale = 1;
+			if(maxW)clipWidth = maxW;
+			if(maxH)clipHeight = maxH;
+			
+			if($(imgObj).width() >= clipWidth || $(imgObj).height() >= clipHeight)
+			{
+				if ($(imgObj).width() > $(imgObj).height()) {
+				    imageScale = clipWidth / imageWidth;
+					imageWidth = clipWidth;
+					imageHeight = imageHeight * imageScale;
+				} else {
+				    imageScale = clipHeight / imageHeight;
+					imageHeight = clipHeight;
+					imageWidth = imageWidth * imageScale; 
+				}
+			}
+			$(imgObj).width(imageWidth);
+			$(imgObj).height(imageHeight);
+			$('.yiz-slider-3').height(imageHeight);
+			$('.near_nav').height(imageHeight);
+		}//end func
+	});
+</script>
+</html>
