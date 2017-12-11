@@ -1,232 +1,84 @@
-;(function () {
-	
-	'use strict';
-
-	var isMobile = {
-		Android: function() {
-			return navigator.userAgent.match(/Android/i);
-		},
-			BlackBerry: function() {
-			return navigator.userAgent.match(/BlackBerry/i);
-		},
-			iOS: function() {
-			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-		},
-			Opera: function() {
-			return navigator.userAgent.match(/Opera Mini/i);
-		},
-			Windows: function() {
-			return navigator.userAgent.match(/IEMobile/i);
-		},
-			any: function() {
-			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-		}
-	};
-
-	var fullHeight = function() {
-
-		if ( !isMobile.any() ) {
-			$('.js-fullheight').css('height', $(window).height() - $('#fh5co-header').height());
-			$(window).resize(function(){
-				$('.js-fullheight').css('height', $(window).height() - $('#fh5co-header').height());
-			});
-		}
-
-	};
-
-	// iPad and iPod detection	
-	var isiPad = function(){
-		return (navigator.platform.indexOf("iPad") != -1);
-	};
-
-	var isiPhone = function(){
-	    return (
-			(navigator.platform.indexOf("iPhone") != -1) || 
-			(navigator.platform.indexOf("iPod") != -1)
-	    );
-	};
-
-	// Main Menu Superfish
-	var mainMenu = function() {
-
-		$('#fh5co-primary-menu').superfish({
-			delay: 0,
-			animation: {
-				opacity: 'show'
-			},
-			speed: 'fast',
-			cssArrows: true,
-			disableHI: true
-		});
-
-	};
-
-	var sliderMain = function() {
-		
-	  	$('#fh5co-hero .flexslider').flexslider({
-			animation: "fade",
-			slideshowSpeed: 5000,
-			directionNav: true,
-			start: function(){
-				setTimeout(function(){
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-				}, 500);
-			},
-			before: function(){
-				setTimeout(function(){
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-				}, 500);
-			}
-
-	  	});
-
-	  	$('#fh5co-hero .flexslider .slides > li').css('height', $(window).height());	
-	  	$(window).resize(function(){
-	  		$('#fh5co-hero .flexslider .slides > li').css('height', $(window).height());	
-	  	});
-
-	};
-
-
-	// Offcanvas and cloning of the main menu
-	var offcanvas = function() {
-
-		var $clone = $('#fh5co-menu-wrap').clone();
-		$clone.attr({
-			'id' : 'offcanvas-menu'
-		});
-		$clone.find('> ul').attr({
-			'class' : '',
-			'id' : ''
-		});
-
-		$('#fh5co-page').prepend($clone);
-
-		// click the burger
-		$('.js-fh5co-nav-toggle').on('click', function(){
-
-			if ( $('body').hasClass('fh5co-offcanvas') ) {
-				$('body').removeClass('fh5co-offcanvas');
-			} else {
-				$('body').addClass('fh5co-offcanvas');
-			}
-			// $('body').toggleClass('fh5co-offcanvas');
-
-		});
-
-		$('#offcanvas-menu').css('height', $(window).height());
-
-		$(window).resize(function(){
-			var w = $(window);
-
-
-			$('#offcanvas-menu').css('height', w.height());
-
-			if ( w.width() > 769 ) {
-				if ( $('body').hasClass('fh5co-offcanvas') ) {
-					$('body').removeClass('fh5co-offcanvas');
-				}
-			}
-
-		});	
-
-	}
-
-	
-
-	// Click outside of the Mobile Menu
-	var mobileMenuOutsideClick = function() {
-		$(document).click(function (e) {
-	    var container = $("#offcanvas-menu, .js-fh5co-nav-toggle");
-	    if (!container.is(e.target) && container.has(e.target).length === 0) {
-	      if ( $('body').hasClass('fh5co-offcanvas') ) {
-				$('body').removeClass('fh5co-offcanvas');
-			}
-	    }
-		});
-	};
-
-	// Parallax
-	var parallax = function() {
-		$(window).stellar();
-	};
-
-
-	// Animations
-
-	var contentWayPoint = function() {
-		var i = 0;
-		$('.animate-box').waypoint( function( direction ) {
-
-			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-				
-				i++;
-
-				$(this.element).addClass('item-animate');
-				setTimeout(function(){
-
-					$('body .animate-box.item-animate').each(function(k){
-						var el = $(this);
-						setTimeout( function () {
-							el.addClass('fadeInUp animated');
-							el.removeClass('item-animate');
-						},  k * 200, 'easeInOutExpo' );
-					});
-					
-				}, 100);
-				
-			}
-
-		} , { offset: '85%' } );
-	};
-
-	var gridAutoHeight = function() {
-		if (!isiPhone() || !isiPad()) {
-			$('.row-half').css('height', $('.col-half').outerHeight()/2);
-		}
-		$(window).resize(function(){
-			if (!isiPhone() && !isiPad()) {
-				$('.row-half').css('height', $('.col-half').outerHeight()/2);
-			}
-		});
-	}
-
-	var counter = function() {
-		$('.js-counter').countTo({
-			formatter: function (value, options) {
-	      	return value.toFixed(options.decimals);
-	    	}
-		});
-	};
-
-	var counterWayPoint = function() {
-		if ($('#fh5co-counter-section').length > 0 ) {
-			$('#fh5co-counter-section').waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-					setTimeout( counter , 400);					
-					$(this.element).addClass('animated');
-						
-				}
-			} , { offset: '90%' } );
-		}
-	};
-	
-
-	// Document on load.
-	$(function(){
-		mainMenu();
-		offcanvas();
-		mobileMenuOutsideClick();
-		contentWayPoint();
-		sliderMain();
-		fullHeight();
-		gridAutoHeight();
-		parallax();
-		counterWayPoint();
-	});
-
-
-}());
+$(function(){
+    $("a.shop_ico,a.user_ico").click(function(){
+        
+        var canshu,url;
+            var src=$("div.leftbox").find("iframe").attr("s");
+            if($(this).attr("class")=="shop_ico"){
+                canshu="?t=shop";
+            }else{
+                canshu="?t=user";
+            }
+            url=src+canshu;
+            $("div.leftbox").find("iframe").attr("src",url);
+        
+        
+        $("div.jianting").stop().animate({
+            marginLeft:'-450px'
+        },function(){
+            $("div.bg").show();
+            
+        });
+        $("div.leftbox").stop().animate({
+            marginRight:'0px'
+        },function(){
+            $("div.bg").click(function(){
+                $("div.bg").hide();
+                $("div.jianting").stop().animate({marginLeft:'0px'})
+                $("div.leftbox").stop().animate({marginRight:'-450px'})
+            })
+        });
+    })
+    
+    
+   
+    //头部搜索
+    
+    
+    $("a.search_ico").mouseleave(function(){          
+         $('div.topsearch').show(0,function(){
+             $("input#topsearch").focus(function(){
+                 $(this).val("");
+             })
+             $("input#topsearch").blur(function(){
+                 $(this).val("搜索相关产品...");
+             })
+         });
+     })
+    
+    $(document).bind('click',function(e){
+                var e = e || window.event; //浏览器兼容性
+                var elem = e.target || e.srcElement;
+                while (elem) { //循环判断至跟节点，防止点击的是div子元素
+                    if (elem.id && elem.id=='test') {
+                        return;
+                    }
+                    elem = elem.parentNode;
+                }
+                $('div.topsearch').css('display','none'); //点击的不是div或其子元素
+            });
+    
+     $("form#formindexsearch").submit(function(){
+         var val=$.trim($("#topsearch").val());
+         if(val=="" || val=="搜索相关产品..."){
+             layer.alert('请输入关键字!', {icon: 2});
+             return false;
+         }else{
+             layer.alert('缺少产品!', {icon: 2});
+         }
+         return false;
+     })
+    
+    
+     
+   //ifarme
+$("#iframeId").load(function(){
+	var mainheight = $(window).height();    
+	$(this).height(mainheight);
+}); 
+ 
+$("#iframeId").resize(function(){
+    var mainheight = $(window).height();    
+	$(this).height(mainheight);
+})
+    
+})
